@@ -22,6 +22,9 @@ int check_cycle(listint_t *list)
 {
 	listint_t *checker;
 
+	if (list == NULL)
+		return (0);
+
 	checker = list->next;
 	while (checker != NULL)
 	{
