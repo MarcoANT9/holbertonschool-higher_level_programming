@@ -20,7 +20,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *checker, tmp;
+	listint_t *checker, *tmp;
 
 	tmp = list;
 
@@ -33,6 +33,7 @@ int check_cycle(listint_t *list)
 				return (1);
 			checker = checker->next;
 		}
+		tmp = tmp->next;
 	}
 	return (0);
 
