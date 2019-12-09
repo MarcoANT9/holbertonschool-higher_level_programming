@@ -20,17 +20,20 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *checker;
+	listint_t *checker, tmp;
 
-	checker = list->next;
+	tmp = list;
 
-	while (checker != NULL)
+	while (tmp != NULL)
 	{
-		if (checker == list)
-			return (1);
-		checker = checker->next;
+		checker = tmp->next;
+		while (checker != NULL)
+		{
+			if (checker == tmp)
+				return (1);
+			checker = checker->next;
+		}
 	}
-
 	return (0);
 
 }
