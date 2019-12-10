@@ -1,0 +1,1 @@
+This proyect will focus on the conditionals and loops of Python
