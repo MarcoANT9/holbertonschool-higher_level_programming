@@ -25,10 +25,12 @@ listint_t *insert_node(listint_t **head, int number)
 
 	if (added_node == NULL)
 		return (NULL);
-	if (head == NULL)
+	if (*head == NULL)
 	{
-		free(added_node);
-		return (NULL);
+		*head = added_node;
+		added_node->n = number;
+		added_node->next = NULL;
+		return (added_node);
 	}
 	added_node->n = number;
 	current_node = *head;
