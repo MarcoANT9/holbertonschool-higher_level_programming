@@ -2,6 +2,6 @@
 for i in range(0, 100):
     if (i // 10 < i % 10):
         if i != 89:
-            print("{:d}{:d}".format(i // 10, i % 10), end = ", ")
+            print("{:d}{:d}".format(i // 10, i % 10), end=", ")
         else:
             print("{:d}{:d}".format(i // 10, i % 10))
