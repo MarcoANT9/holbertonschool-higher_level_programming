@@ -7,12 +7,8 @@
  *
  * @list: Pointer to the begining of a single linked list.
  *
- *
- *
  * Description - This program takes a single linked list and determines
  *               if said list contains a cycle within it.
- *
- *
  *
  * Return: → 1 if the list has a cycle.
  *         → 0 if the list has no cycle.
@@ -20,17 +16,20 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *checker;
+	listint_t *wabit, *tultre;
 
 	if (list == NULL)
 		return (0);
 
-	checker = list->next;
-	while (checker != NULL)
+	wabit = list;
+	tultre = list;
+
+	while (wabit != NULL && tultre != NULL)
 	{
-		if (checker == list)
+		wabit = wabit->next->next;
+		tultre = tultre->next;
+		if (wabit == tultre)
 			return (1);
-		checker = checker->next;
 	}
 	return (0);
 }
