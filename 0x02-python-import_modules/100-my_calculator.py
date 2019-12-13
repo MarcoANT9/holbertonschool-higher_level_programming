@@ -8,7 +8,7 @@ def main():
         print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         exit(1)
 
-        from calculator_1 import add, sub, mul, div
+    from calculator_1 import add, sub, mul, div
 
     a = int(sys.argv[1])
     b = int(sys.argv[3])
