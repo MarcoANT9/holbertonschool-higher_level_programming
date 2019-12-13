@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
-import sys
-
-
 def main():
+
+    import sys
 
     args = len(sys.argv)
     if args != 4:
         print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         exit(1)
 
+        from calculator_1 import add, sub, mul, div
+
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    operator = sys.argv[2]
+    operator = str(sys.argv[2])
     op_list = ["+", "-", "*", "/"]
 
     if not(operator in op_list):
