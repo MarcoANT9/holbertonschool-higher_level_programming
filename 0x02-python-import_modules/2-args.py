@@ -3,6 +3,7 @@ import sys
 
 
 def main():
+
     args = len(sys.argv) - 1
     print("{}".format(args), end="")
     if args == 0:
