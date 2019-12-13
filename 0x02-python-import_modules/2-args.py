@@ -10,7 +10,7 @@ def main():
         print(" arguments.")
     elif args == 1:
         print(" argument:")
-        print("1. {}".format(sys.argv[1]))
+        print("1: {}".format(sys.argv[1]))
     else:
         index = 1
         print(" arguments:")
