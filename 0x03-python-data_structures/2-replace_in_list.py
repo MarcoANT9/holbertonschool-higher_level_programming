@@ -5,8 +5,9 @@ def replace_in_list(my_list, idx, element):
        element introduced in the function. Does nothing on error
        or if the index is out of bounds                       '''
 
-    if idx >= 0 and idx < len(my_list):
+    if idx < 0 and idx >= len(my_list):
+        return None
+
+    else:
         my_list[idx] = element
         return my_list
-
-    return None
