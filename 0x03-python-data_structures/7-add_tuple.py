@@ -5,7 +5,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
        elements, later it will return a tuple containint these
        results.                                            '''
 
-
     if len(tuple_a) < 2:
         if len(tuple_a) == 1:
             s_tu_a = tuple_a[0], 0
