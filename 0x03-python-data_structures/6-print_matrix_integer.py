@@ -18,7 +18,7 @@ def print_matrix_integer(matrix=[[]]):
         while (index < len(matrix)):
             jndex = 0
             while (jndex < len(matrix[index])):
-                print("{}".format(matrix[index][jndex]), end="")
+                print("{:d}".format(matrix[index][jndex]), end="")
                 if (jndex + 1 < len(matrix[index])):
                     print(" ", end="")
                 else:
