@@ -1,0 +1,1 @@
+This project will be about data structures in Python.
