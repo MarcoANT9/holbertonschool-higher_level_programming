@@ -9,7 +9,7 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
 
     except TypeError:
-        print("Exception: Unknown format code 'd' for object of typr 'str'",
+        print("Exception: The value is not compatible with format 'd'",
               file=sys.stderr)
         return False
 
