@@ -17,14 +17,14 @@ class Square():
 
     def my_print(self):
         """The number of positions to translate the square."""
-        for y in range(0, self.position[1]):
-            print("")
-        if self.size == 0:
-            print("")
-        for i in range(0, self.size):
-            for x in range(0, self.position[0]):
+        for y in range(0, self.__position[1]):
+            print()
+        if self.__size == 0:
+            print()
+        for i in range(0, self.__size):
+            for x in range(0, self.__position[0]):
                 print(" ", end="")
-            for j in range(0, self.size):
+            for j in range(0, self.__size):
                 print("#", end="")
             print("")
 
@@ -54,4 +54,4 @@ class Square():
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
         else:
-            raise TypeError ("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
