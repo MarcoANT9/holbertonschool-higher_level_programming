@@ -49,8 +49,9 @@ class Square():
     @position.setter
     def position(self, value):
         """Validates values for size"""
-        if not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] < 0 or value[0] < 0:
-            raise ValueError("size must be >= 0")
-        self.__position = value
+        if len(value) == 2 and type(value) == tuple:
+            if type(value[0]) == int and type(value[1]) == int:
+                if value[0] >= 0 and value[1] >= 0:
+                    self.__position = value
+        else:
+            raise TypeError ("position must be a tuple of 2 positive integers")
