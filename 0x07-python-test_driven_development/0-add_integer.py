@@ -5,7 +5,8 @@ This is the "add_integer" module. Usage: add_integer(a, b)
 5
 """
 
-def add_integer(a, b = 98):
+
+def add_integer(a, b=98):
     """
     Returns the sum of two integers.
     """
@@ -16,4 +17,3 @@ def add_integer(a, b = 98):
     a = int(a)
     b = int(b)
     return (a + b)
-

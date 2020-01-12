@@ -5,6 +5,7 @@ This is the "matrix_divied" module. Usage: matrix_divided(matrix, div)
 [[1, 2, 3], [5, 6, 7]]
 """
 
+
 def matrix_divided(matrix, div):
     """
     Returns a new matrix with the quotients of the division.
@@ -40,6 +41,5 @@ def matrix_divided(matrix, div):
                 raise TypeError(error1)
     else:
         raise TypeError(error1)
-
 
     return new_matrix
