@@ -1,0 +1,99 @@
+========================================================
+= This is the test file for the "0-add_integer" module =
+========================================================
+
+This library is a simple function that adds two numbers
+together. The function is called "add_integer" it takes
+two arguments and check if they are integers or floats
+then it adds them to return their result.
+
+========================================================
+
+Numbers
+=======
+
+"add_integer" returns the result of the sum if both of
+the numbers are integers.
+
+::
+
+>>> result = __import__('0-add_integer').add_integer
+>>> result(1, 2)
+3
+
+for floating point values, they first get converted into
+integers before being sum.
+
+::
+
+>>> result(1.1, 2.2)
+3
+
+The program also accepts only one argument, be it either
+an integer or a floating point value. This is because the
+second argument is 98 by defaul.
+
+::
+
+>>> result (1)
+99
+
+>>> result (1.1)
+99
+
+Non - Numbers
+=============
+
+String
+------
+The module does not accept strings as arguments, and it will
+prompt a TypeError specifying this.
+
+>>> result("a")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> result(2, "a")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+The same result is expected for any type of variable
+that is not an integer or float.
+
+Tuples
+------
+>>> result((1, 2))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> result(2, (1, 2))
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+Lists
+-----
+>>> result([1, 2])
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> result(2, [1, 2])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+Dictionaries
+------------
+>>> result({'a':2})
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> result(2, {'a':2})
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
