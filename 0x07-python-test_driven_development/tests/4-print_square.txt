@@ -1,0 +1,52 @@
+===============================================================
+=    This is the test file for the "4-print_square" module    =
+===============================================================
+
+This library is a simple function that writes a square using the
+"#" character. This function is called "print_square"it takes one
+argument, the size of a square.
+=======================================================
+
+Usage
+=====
+For the module to work propertly, it has to be feed one argument;
+the size of the square.
+
+::
+
+>>> squared = __import__('4-print_square').print_square
+>>> squared(3)
+###
+###
+###
+
+It can also be zero
+
+>>> squared(0)
+
+
+It just prints a new line
+
+Error Cases
+===========
+
+If the argument is not an integer
+
+>>> squared("Hello_there")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> squared(3.14)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+::
+
+If the size is less than zero (makes no physical sense)
+
+>>> squared(-4)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0

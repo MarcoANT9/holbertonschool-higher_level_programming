@@ -1,0 +1,44 @@
+===============================================================
+=     This is the test file for the "3-say_my_name" module    =
+===============================================================
+
+This library is a simple function that writes "My name is
+<first_name> <last_name>. This function is called "say_my_name"
+it takes two arguments, the first and second name (this one is
+"" by default) then prints on the stdout.
+=======================================================
+
+Usage
+=====
+For the module to work propertly, it has to be feed two args;
+the first one is the "first name", it must be a string, the second
+argument, "last name" is optional and must also be a string.
+
+::
+
+>>> say_it = __import__('3-say_my_name').say_my_name
+>>> say_it("Marco", "ANT")
+My name is Marco ANT
+
+
+You can also leave the second argument blank
+
+>>> say_it("Marco")
+My name is Marco 
+
+(Note: At the end of the last example is a blank space)
+
+Error Cases
+===========
+
+Either of the two arguments is not a string.
+
+>>> say_it(2, "Antonio")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_it("Marco", [1, 2])
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string

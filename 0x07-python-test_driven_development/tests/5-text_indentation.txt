@@ -1,0 +1,82 @@
+===============================================================
+=  This is the test file for the "5-text_indentation" module  =
+===============================================================
+
+This library is a simple function that writes a text in the
+stdout. This function is called "text_indentation"it takes one
+argument, the text you want to print. It separates the text when
+it founds the characters "?", "." and ":".
+=======================================================
+
+Usage
+=====
+For the module to work propertly, it has to be feed one argument;
+the text you want to print into the stdout.
+
+::
+
+>>> texted = __import__('5-text_indentation').text_indentation
+>>> texted("Hello There. General Kenobi.")
+Hello There.
+<BLANKLINE>
+General Kenobi.
+<BLANKLINE>
+<BLANKLINE>
+
+
+It also works with blank text:
+
+>>> texted("")
+<BLANKLINE>
+
+It just prints a nothing... (<BLANKLINE> is to show it prints a
+blank line)
+
+
+You can also have numbers in there, as long as they are in string
+format:
+
+>>> texted("And the Lord spake, saying, First shalt thou take out the Holy Pin. Then, shalt thou count to three. No more. No less. Three shalt be the number thou shalt count, and the number of the counting shall be three. Four shalt thou not count, nor either count thou two, excepting that thou then proceed to three. Five is right out. Once the number three, being the third number, be reached, then, lobbest thou thy Holy Hand Grenade of Antioch towards thy foe, who, being naughty in My sight, shall snuff it.")
+And the Lord spake, saying, First shalt thou take out the Holy Pin.
+<BLANKLINE>
+Then, shalt thou count to three.
+<BLANKLINE>
+No more.
+<BLANKLINE>
+No less.
+<BLANKLINE>
+Three shalt be the number thou shalt count, and the number of the counting shall be three.
+<BLANKLINE>
+Four shalt thou not count, nor either count thou two, excepting that thou then proceed to three.
+<BLANKLINE>
+Five is right out.
+<BLANKLINE>
+Once the number three, being the third number, be reached, then, lobbest thou thy Holy Hand Grenade of Antioch towards thy foe, who, being naughty in My sight, shall snuff it.
+<BLANKLINE>
+<BLANKLINE>
+
+
+Error Cases
+===========
+
+If the argument is not an string.
+
+>>> texted(2)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> texted(3.14)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> texted(["a", 3.14])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> texted(("a", 5))
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string

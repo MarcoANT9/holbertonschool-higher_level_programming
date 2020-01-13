@@ -1,0 +1,73 @@
+===========================================================
+= This is the test file for the "2-matrix_divided" module =
+===========================================================
+
+This library is a simple function that divides the elements
+of a matrix with a divisor, the quotients are rounded to 2
+decimal paces. The function is called "matrix_divided" it
+takes two arguments, a matrix and a divisor, then it divides
+each element of the matrix with the divisor and returns the
+new matrix.
+
+========================================================
+
+Usage
+=====
+For the module to work propertly, it has to be feed two args;
+the first one is a matrix, it may be a rectangular or squared
+one; the second argument, must be an integer or a floar number.
+
+::
+
+>>> quot = __import__('2-matrix_divided').matrix_divided
+>>> quot([[2, 4, 6], [8, 10, 12]], 2)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+The matrix must have integers or floating point numbers inside
+of it.
+
+
+Error Cases
+===========
+
+If the first element of the function is not a matrix
+
+>>> quot(1, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+Same result if the matrix has elements inside that are not integers or
+floats.
+
+>>> quot([[2, "a", 6]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+The same error could be achieved if the first argument is a simple vector
+
+>>> quot([2, 4, 6], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+The second argument must be an integer different from zero, otherwise
+there would be errors:
+
+>>> quot([2, 4, 6], "a")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+
+>>> quot([2, 4, 6], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
