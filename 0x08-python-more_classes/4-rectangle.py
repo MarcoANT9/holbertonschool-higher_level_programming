@@ -20,7 +20,7 @@ class Rectangle:
         else:
             return (self.width * 2) + (self.height * 2)
 
-    def __str__(self): #Prints the rectangle
+    def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
         i = 0
@@ -35,13 +35,10 @@ class Rectangle:
         rectangle = rectangle.strip('\n')
         return rectangle
 
-
     def __repr__(self):
         text = '{self.__class__.__name__}({self.width}, {self.height})'
         rep_return = text.format(self=self)
         return rep_return
-
-
 
     @property
     def width(self):

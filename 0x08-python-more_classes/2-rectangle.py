@@ -20,7 +20,6 @@ class Rectangle:
         else:
             return (self.width * 2) + (self.height * 2)
 
-
     @property
     def width(self):
         return self.__width
