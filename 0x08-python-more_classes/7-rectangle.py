@@ -14,7 +14,6 @@ class Rectangle:
         self.__height = height
         Rectangle.number_of_instances += 1
         self.number_of_instances = Rectangle.number_of_instances
-        self.print_symbol = Rectangle.print_symbol
 
     def area(self):
         return (self.__width * self.__height)
