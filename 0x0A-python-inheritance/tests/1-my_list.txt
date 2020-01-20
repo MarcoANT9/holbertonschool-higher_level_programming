@@ -1,0 +1,36 @@
+========================================================
+=   This is the test file for the "1-my_list" module   =
+========================================================
+
+This module is a class named "MyList" which will inherit
+from list. It has a public instane method "print_sorted"
+which prints all elements of the list in a sorted order
+(ascending sort), the elements contained in the list will
+always be integers.
+
+========================================================
+
+TEST CASES
+==========
+"print_sorted" prints the list it gets in its input as an
+ordered list (ascending order), it does not return any value.
+
+::
+
+>>> MyList = __import__('1-my_list').MyList
+>>> sort_list = MyList()
+>>> sort_list.append(1)
+>>> sort_list.append(-2)
+>>> sort_list.append(0)
+
+>>> sort_list.print_sorted()
+[-2, 0, 1]
+
+::
+
+>>> sort_list[0] = -1
+>>> sort_list[1] = -6
+>>> sort_list[2] = -3
+
+>>> sort_list.print_sorted()
+[-6, -3, -1]
