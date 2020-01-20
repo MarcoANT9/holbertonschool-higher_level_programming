@@ -1,0 +1,54 @@
+==========================================================
+= This is the test file for the "7-base_geometry" module =
+==========================================================
+
+This module is a class named "BaseGeometry", it will make
+validations to see if the values inserted comply to the
+conditions imparted by mathematical and physical restrains
+
+==========================================================
+
+
+TEST CASES
+==========
+
+::
+
+>>> MyGeometry = __import__('7-base_geometry').BaseGeometry
+>>> my_figure = MyGeometry()
+>>> my_figure.integer_validator("Marco", 4)
+
+>>> my_figure.integer_validator("Jill", 0)
+Traceback (most recent call last):
+    ...
+ValueError: Jill must be greater that 0
+
+>>> my_figure.integer_validator("Chris", -5)
+Traceback (most recent call last):
+    ...
+ValueError: Chris must be greater that 0
+
+>>> my_figure.integer_validator("Ana", "Mary")
+Traceback (most recent call last):
+    ...
+TypeError: Ana must be an integer
+
+>>> my_figure.integer_validator("Danny", [1, 2, 8])
+Traceback (most recent call last):
+    ...
+TypeError: Danny must be an integer
+
+>>> my_figure.integer_validator()
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> my_figure.integer_validator("Adam")
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> my_figure.integer_validator("Sara", True)
+Traceback (most recent call last):
+    ...
+TypeError: Sara must be an integer
