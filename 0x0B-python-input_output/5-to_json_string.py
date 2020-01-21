@@ -13,9 +13,7 @@ def to_json_string(my_obj):
     json representation. It returns the result.
     """
 
-    return(json.dumps(my_obj))
-
-
+    return json.dumps(my_obj)
 
 if __name__ == "__main__":
     main()
