@@ -13,11 +13,11 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """ Initializes the class."""
+
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
-
 
     def area(self):
         """Calculates the area of the rectangle."""
@@ -25,6 +25,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """ Prints the description of the rectangle."""
-        rect = "[Rectangle]"
+        rect = "[" + type(self).__name__ + "]"
 
         return (rect + " {}/{}".format(self.__width, self.__height))
