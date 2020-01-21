@@ -10,7 +10,7 @@ def number_of_lines(filename=""):
     This function takes a file and opens it to count its lines.
 
     """
-    with open("my_file_0.txt", "r", encoding="utf-8") as myfile:
+    with open(filename, "r", encoding="utf-8") as myfile:
         number_lines = 0
         for myLine in myfile:
             number_lines += 1
