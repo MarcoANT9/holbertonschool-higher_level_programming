@@ -27,7 +27,7 @@ class Base():
     """= METHODS ==========================================================="""
     """====================================================================="""
 
-    @staticmethod
+    @classmethod
     def create(cls, **dictionary):
         """ This static method returns an instance with all attributes set """
         if cls.__name__ == "Rectangle":
