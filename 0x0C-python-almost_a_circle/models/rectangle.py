@@ -123,7 +123,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """ This setter, assings value to the x position. """
-        if not isinstance(value, int):
+        if type(value) !=  int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -137,7 +137,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """ This setter, assings value to the y position. """
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be greather or equal to 0")
