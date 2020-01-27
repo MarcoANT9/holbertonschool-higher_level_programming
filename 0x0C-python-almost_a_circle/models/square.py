@@ -41,6 +41,12 @@ class Square(Rectangle):
             self.x = kwargs.get('x', self.x)
             self.y = kwargs.get('y', self.y)
 
+    def to_dictionary(self):
+        """ Returns a dictionary representation of the class """
+        dictt = ({'id': self.id, 'x': self.x, 'y': self.y})
+        dictt.update({'size': self.width})
+        return dictt
+
     """====================================================================="""
     """= GETTERS & SETTERS ================================================="""
     """====================================================================="""

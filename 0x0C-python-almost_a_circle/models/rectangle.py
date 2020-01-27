@@ -45,7 +45,7 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             return ""
         name = self.__class__.__name__
-        if self.width != self.height:
+        if name == "Rectangle":
             text = ("[{}] ({}) {}/{} - {}/{}".format(name, self.id, self.x,
                                                      self.y, self.width,
                                                      self.height))
@@ -57,11 +57,8 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ Returns a dictionary representation of the class """
         dictt = ({'id': self.id, 'x': self.x, 'y': self.y})
-        if self.width == self.height:
-            dictt.update({'size': self.width})
-        else:
-            dictt.update({'width': self.width})
-            dictt.update({'height': self.height})
+        dictt.update({'width': self.width})
+        dictt.update({'height': self.height})
         return dictt
 
     def update(self, *args, **kwargs):
