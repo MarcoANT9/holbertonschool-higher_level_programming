@@ -28,6 +28,13 @@ class Base():
     """====================================================================="""
 
     @staticmethod
+    def from_json_string(json_string):
+        """ Takes a json string and transform it into its python equivalent """
+        if json_string is None or len(json_string) == 0:
+            return ([])
+        return (json.loads(json_string))
+
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ This static method creates a json string from a dictionary """
         if list_dictionaries is None or len(list_dictionaries) == 0:
