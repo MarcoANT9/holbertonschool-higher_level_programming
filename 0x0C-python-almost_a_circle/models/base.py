@@ -31,7 +31,7 @@ class Base():
     def to_json_string(list_dictionaries):
         """ This static method creates a json string from a dictionary """
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return ([])
+            return ("[]")
         else:
             return json.dumps(list_dictionaries)
 
