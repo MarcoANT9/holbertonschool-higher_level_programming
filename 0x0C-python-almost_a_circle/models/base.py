@@ -34,7 +34,7 @@ class Base():
             new_class = cls(1, 2)
         else:
             new_class = cls(1)
-        new_class.update(**dictonary)
+        new_class.update(**dictionary)
         return new_class
 
     @classmethod
