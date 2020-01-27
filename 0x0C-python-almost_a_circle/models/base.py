@@ -28,6 +28,30 @@ class Base():
     """====================================================================="""
 
     @staticmethod
+    def create(cls, **dictionary):
+        """ This static method returns an instance with all attributes set """
+        if cls.__name__ == "Rectangle":
+            new_class = cls(1, 2)
+        else:
+            new_class = cls(1)
+        new_class.update(**dictonary)
+        return new_class
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as myfile:
+                text = Base.from_json_string(myfile.readline())
+                lista = []
+                for i in text:
+                    lista.append(cls.create(**i))
+                return lista
+
+        except:
+            return []
+
+    @staticmethod
     def from_json_string(json_string):
         """ Takes a json string and transform it into its python equivalent """
         if json_string is None or len(json_string) == 0:
