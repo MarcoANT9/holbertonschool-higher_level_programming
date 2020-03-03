@@ -2,9 +2,9 @@
 --   hbtn_0d_usa.
 
 SELECT id, name
-FROM hbtn_0d_usa.cities
-WHERE state_id = 1 IN ( SELECT `id`
-      	       	      	FROM hbtn_0d_usa.states
+FROM cities
+WHERE state_id IN ( SELECT id
+      	       	      	FROM states
 			WHERE name = "California")
-ORDER BY name ASC
+ORDER BY id ASC
 ;
