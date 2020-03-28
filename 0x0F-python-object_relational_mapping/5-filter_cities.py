@@ -7,6 +7,7 @@
             → ARGV[1] = MySQL user.
             → ARGV[2] = MySQL Password.
             → ARGV[3] = MySQL database.
+            → ARGV[4] = State to filter.
 """
 
 if __name__ == "__main__":
@@ -19,19 +20,14 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute(
 
-        """SELECT id, name
-        FROM cities
-        WHERE BINARY state_id IN (SELECT id
-                                  FROM states
-                                  WHERE BINARY name = %s)
-        ORDER BY id ASC""", (sys.argv[4],))
+        """SELECT cities.name
+        FROM cities INNER JOIN states
+        ON states.id = state_id
+        WHERE states.name=%s""", (sys.argv[4],))
 
     cities = cursor.fetchall()
-    for i in range(0, len(cities)):
-        if i + 1 != len(cities):
-            print(cities[i][1], end=", ")
-        else:
-            print(cities[i][1])
+
+    print(", ".join([city[0] for city in cities]))
 
     cursor.close()
     db.close()
