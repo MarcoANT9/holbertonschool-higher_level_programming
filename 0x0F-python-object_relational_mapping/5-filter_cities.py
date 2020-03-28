@@ -23,7 +23,7 @@ if __name__ == "__main__":
         FROM cities
         WHERE BINARY state_id IN (SELECT id
                                   FROM states
-                                  WHERE name = %s)
+                                  WHERE BINARY name = %s)
         ORDER BY id ASC""", (sys.argv[4],))
 
     cities = cursor.fetchall()
