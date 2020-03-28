@@ -21,13 +21,13 @@ if __name__ == "__main__":
 
         """SELECT id, name
         FROM cities
-        WHERE state_id IN ( SELECT id
-                            FROM states
-                            WHERE name = %s)
+        WHERE BINARY state_id IN (SELECT id
+                                  FROM states
+                                  WHERE name = %s)
         ORDER BY id ASC""", (sys.argv[4],))
 
     cities = cursor.fetchall()
-    for i in range (0, len(cities)):
+    for i in range(0, len(cities)):
         if i + 1 != len(cities):
             print(cities[i][1], end=", ")
         else:
