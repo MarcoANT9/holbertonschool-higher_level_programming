@@ -7,16 +7,14 @@
             → ARGV[3] = MySQL database.
 """
 
-import MySQLdb
-import sys
+if __name__ == "__main__":
+
+    import MySQLdb
+    import sys
 
 
-def select_states():
-    """ This function select all the states in a database in ascending order.
-        The program will always connect via the port 3306.                """
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], port=3306,
                          host="localhost", db=sys.argv[3])
-
     cursor = db.cursor()
     cursor.execute("""SELECT * FROM states ORDER BY id ASC""")
     for i in cursor.fetchall():
@@ -24,6 +22,3 @@ def select_states():
 
     cursor.close()
     db.close()
-
-if __name__ == "__main__":
-    main()
