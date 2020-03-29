@@ -19,6 +19,8 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]))
 
     session = sessionmaker(bind=engine)()
-    louisiana = State(name="Louisiana")
-    session.add(louisiana)
+    lou = State(name="Louisiana")
+    session.add(lou)
     session.commit()
+    print(lou.id)
+    session.close()
