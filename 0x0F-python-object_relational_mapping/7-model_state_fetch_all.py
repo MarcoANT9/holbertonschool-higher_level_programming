@@ -22,6 +22,6 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)
     States = session().query(State).all()
     for row in States:
-        print ("{}: {}".format(row.id, row.name))
+        print("{}: {}".format(row.id, row.name))
 
     session.close()
