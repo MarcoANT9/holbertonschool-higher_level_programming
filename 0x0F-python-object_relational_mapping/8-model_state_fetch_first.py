@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     session = sessionmaker(bind=engine)
 
-    State = session().query(State).one()
+    State = session().query(State).first()
     print("{}: {}".format(State.id, State.name))
 
     session.close()
