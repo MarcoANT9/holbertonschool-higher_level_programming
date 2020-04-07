@@ -4,4 +4,4 @@
 # → Arg[0] = Filename (not used)
 # → Arg[1] = URL to send request.
 
-curl -sIX POST "$1" | grep Content-Length | cut --delimiter " " -f2
+curl -sI "$1" | grep Content-Length | cut --delimiter " " -f2
