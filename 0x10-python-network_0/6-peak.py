@@ -12,20 +12,6 @@ def find_peak(list_of_integers):
     """
     if list_of_integers == []:
         return None
-    if len(list_of_integers) == 1:
-        return list_of_integers[0]
-    middle_index = len(list_of_integers) // 2
-    middle_value = list_of_integers[middle_index]
 
-    left_value = find_peak(list_of_integers[:middle_index])
-    right_value = find_peak(list_of_integers[middle_index:])
-
-    if left_value > right_value:
-        maxim = left_value
-    else:
-        maxim = right_value
-
-    if middle_value > maxim:
-        return middle_value
-    else:
-        return maxim
+    list_of_integers.sort()
+    return list_of_integers[-1]
