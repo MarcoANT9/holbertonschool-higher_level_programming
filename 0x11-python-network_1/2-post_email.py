@@ -7,7 +7,7 @@ import sys
 
 if __name__ == '__main__':
 
-    data = {'email':sys.argv[2]}
+    data = {'email': sys.argv[2]}
     url = sys.argv[1]
     post = urllib.parse.urlencode(data).encode('utf-8')
     req = urllib.request.Request(url, post)
