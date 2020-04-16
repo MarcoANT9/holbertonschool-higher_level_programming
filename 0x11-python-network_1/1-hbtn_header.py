@@ -2,7 +2,6 @@
 import urllib.request
 import sys
 
-req = urllib.request.Request(sys.argv[1])
-with urllib.request.urlopen(req) as response:
+with urllib.request.urlopen(sys.argv[1]) as response:
     html = response.info()
     print(html['X-Request-Id'])
