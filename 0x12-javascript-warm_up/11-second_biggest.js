@@ -1,21 +1,9 @@
 #!/usr/bin/node
-
-const args = process.argv.length;
-if (args === 2 || args === 3) {
+const args = process.argv;
+const lenArgs = process.argv.length;
+if (lenArgs <= 3) {
   console.log(0);
 } else {
-  let index = 0;
-  let bigger = process.argv[2];
-  let secondBigger = 0;
-  while (index < args) {
-    console.log(process.argv[index]);
-    if (process.argv[index] > bigger) {
-      secondBigger = bigger;
-      bigger = process.argv[index];
-    } else if (process.argv[index] > secondBigger && process.argv[index] < bigger) {
-      secondBigger = process.argv[index];
-    }
-    index++;
-  }
-  console.log(secondBigger);
+  args.sort(function(a, b) { return a - b });
+  console.log(args[lenArgs - 2]);
 }
