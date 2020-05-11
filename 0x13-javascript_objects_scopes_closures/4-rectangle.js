@@ -7,7 +7,6 @@ class Rectangle {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
-      this.character = 'X';
     }
   }
 
@@ -25,7 +24,7 @@ class Rectangle {
   print () {
     let i = this.height;
     while (i > 0) {
-      console.log(this.character.repeat(this.width));
+      console.log('X'.repeat(this.width));
       i--;
     }
   }
