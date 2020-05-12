@@ -2,12 +2,12 @@
 
 const request = require('request');
 const url = process.argv[2];
-request(url, function (error, response) {
-  if (error) {
-    console.error(error);
+request(url, function (err, response) {
+  if (err) {
+    console.error(err)
   }
   let counter = 0;
-  const actor = 'https://swapi-api.hbtn.io/api/people/18/';
+  const actor = "https://swapi-api.hbtn.io/api/people/18/";
   let body = JSON.parse(response.body);
   body = body.results;
   for (let index = 0; index < body.length; index++) {
