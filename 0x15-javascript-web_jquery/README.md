@@ -4,9 +4,9 @@ This project is an introduction to Javascript Web JQuery
 
 ## TASKS:
 
-### NOTE: In each task an HTML file is used, the files are named according to this notation:
-### <task_number>-main.html
-### Where <task_number> is the number of the task.
+#### NOTE: In each task an HTML file is used, the files are named according to this notation:
+#### <task_number>-main.html
+#### Where <task_number> is the number of the task.
 
 #### Task 0. No jQuery:
 Write a Javascript script that updates the text color of the HTML tag HEADER to red (#FF0000):
